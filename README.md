@@ -6,7 +6,7 @@ This repository contains the dataset introduced in the paper “L^2DGS: Low-Ligh
 2. The real videos do not include groud truth.
 
 ### How to access the dataset
-1. Please read the dataset agreement here:
+1. Please read the dataset agreement here: https://drive.google.com/file/d/1-ap0N9CiVzc7Zr4_itnDSv6eiuF9fb2c/view?usp=sharing
 2. Download and sign the agreement form.
 3. Submit your request through the following form:
 4. Upload the signed agreement as part of the request form.
