@@ -37,8 +37,6 @@ import torch.nn.functional as F
 from torchvision.transforms.functional import normalize
 
 from Myloss import LiftIntensity, L_color, DepthLoss, L_spa, L_exp, Sa_Loss, L_TV, SmoothLaplacian, GammaLog, ImageGradient, VariancePooling, DepthSmoothLoss
-from lednet.scripts.generate_low_light_class import GenerateLowLight
-from discriminator import PatchDiscriminator
 
 def soft_clip_opacity(opacity, beta=5.0, threshold=0.1):
     # opacity: (N,)
@@ -144,9 +142,7 @@ def scene_reconstruction(dataset, opt, hyper, pipe, testing_iterations, saving_i
 
     VarPool = VariancePooling(window_size=3).cuda()
 
-    GANLoss = nn.BCEWithLogitsLoss()
-
-    DisNet = PatchDiscriminator().cuda()
+    
     disc_optimizer = torch.optim.Adam(DisNet.parameters(), lr=2e-4, betas=(0.5, 0.999))
 
     disc_loss = 0 
